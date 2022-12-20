@@ -33,5 +33,6 @@
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "radix": "off"
-  }
+  },
+  "extends": ["prettier"]
 }
