@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS petfeed;
+CREATE DATABASE petfeed;
