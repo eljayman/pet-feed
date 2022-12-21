@@ -1,3 +1,4 @@
+
 const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -9,8 +10,7 @@ Pet.init(
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
       allowNull: false,
-      primaryKey: true,
-    },
+      primaryKey: true,    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -26,3 +26,4 @@ Pet.init(
 );
 
 module.exports = Pet;
+
