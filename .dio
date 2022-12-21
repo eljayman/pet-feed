@@ -27,7 +27,7 @@
                 <mxCell id="D4h_o2BqiFLex2grdDVz-4" value="Post&lt;br&gt;&lt;br&gt;hasOne(Pet):&lt;br&gt;description:&lt;br&gt;picture:&lt;br&gt;time_posted:&lt;br&gt;uuid:&lt;br&gt;hasMany(comments):" style="whiteSpace=wrap;html=1;" parent="D4h_o2BqiFLex2grdDVz-1" vertex="1">
                     <mxGeometry x="280" y="10" width="120" height="190" as="geometry"/>
                 </mxCell>
-                <mxCell id="D4h_o2BqiFLex2grdDVz-5" value="Comments&lt;br&gt;&lt;br&gt;hasOne(Pet):&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="D4h_o2BqiFLex2grdDVz-1" vertex="1">
+                <mxCell id="D4h_o2BqiFLex2grdDVz-5" value="Comments&lt;br&gt;&lt;br&gt;hasOne(Post):&lt;br&gt;hasOne(User):&lt;br&gt;time_posted:&lt;br&gt;uuid:&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="D4h_o2BqiFLex2grdDVz-1" vertex="1">
                     <mxGeometry x="410" y="10" width="120" height="190" as="geometry"/>
                 </mxCell>
             </root>
