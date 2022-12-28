@@ -11,12 +11,12 @@ class User extends Model {
 User.init(
   {
     id: {
-      type: Sequelize.UUID,
-      defaultValue: Sequelize.UUIDV4,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
     },
-    name: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -35,6 +35,23 @@ User.init(
         len: [8],
       },
     },
+    pet_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    species: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    // Todo, implement imageUrl
+    // imageURL: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
   },
   {
     hooks: {

@@ -1,16 +1,17 @@
 const { Model, DataTypes, Sequelize } = require('sequelize');
+const User = require('./User');
 
 const sequelize = require('../config/connection');
 
-class Feed extends Model {}
+class Post extends Model {}
 
-Feed.init(
+Post.init(
   {
     id: {
-      type: Sequelize.UUID,
-      defaultValue: Sequelize.UUIDV4,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
     },
     title: {
       type: DataTypes.STRING,
@@ -20,9 +21,17 @@ Feed.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    imageURL: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    // ToDo, implement post ImageUrl
+    // imageURL: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
 
@@ -31,8 +40,8 @@ Feed.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'post',
   }
 );
 
-module.exports = Feed;
+module.exports = Post;
