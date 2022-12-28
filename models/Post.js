@@ -2,9 +2,9 @@ const { Model, DataTypes, Sequelize } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class Feed extends Model {}
+class Post extends Model {}
 
-Feed.init(
+Post.init(
   {
     id: {
       type: Sequelize.UUID,
@@ -24,6 +24,13 @@ Feed.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
 
   {
@@ -31,8 +38,8 @@ Feed.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'post',
   }
 );
 
-module.exports = Feed;
+module.exports = Post;

@@ -16,7 +16,7 @@ User.init(
       allowNull: false,
       primaryKey: true,
     },
-    name: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -34,6 +34,22 @@ User.init(
       validate: {
         len: [8],
       },
+    },    
+    pet_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    species: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    imageURL: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
