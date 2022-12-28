@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,  
+      "user_name": "Leland",
+      "email": "leland@mail.com",
+      "password": "password",
+      "pet_name": "michel",
+      "species": "rat",
+      "breed": "unknown"
+    },
+    {
+      "id": 2,
+      "user_name": "Jace",
+      "email": "jace@gmail.com",
+      "password": "jacespass",
+      "pet_name": "Sauron",
+      "species": "Belgian Malinois",
+      "breed":"The Dark Lord"
+    },
+    {
+      "id": 3,
+      "user_name": "Rhonda",
+      "email": "rhonda@gmail.com",
+      "password": "rhondaspass",
+      "pet_name": "Liam Nielson",
+      "species": "cat",
+      "breed": "siberian"
+    }
+]
