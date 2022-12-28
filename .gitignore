@@ -1,3 +1,5 @@
+.dio
+.env
 # Logs
 logs
 *.log
