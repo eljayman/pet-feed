@@ -1,14 +1,107 @@
 <mxfile host="65bd71144e">
     <diagram id="H-Xk3k1YOWCcV0c82pGs" name="Page-1">
-        <mxGraphModel dx="1038" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1149" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="1280" width="470" height="280" as="geometry"/>
+                </mxCell>
                 <mxCell id="2" value="Needs:&lt;br&gt;-restful API&lt;br&gt;- login&lt;br&gt;- unique user ID's&lt;br&gt;- store/render image files to/from db&lt;br&gt;-handlebars templates&lt;br&gt;-node and express&lt;br&gt;- one new api tech or library&lt;br&gt;- MVC structure&lt;br&gt;- .env file&lt;br&gt;-deploy on heroku&lt;br&gt;-best practices(eslint, prettier)&lt;br&gt;-be responsive&lt;br&gt;-interactive&lt;br&gt;-README" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="20" y="5" width="210" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="Maybe:&lt;br&gt;&lt;br&gt;API that allows a user to reset a password.&lt;br&gt;tailwindCSS&lt;br&gt;node mailer&lt;br&gt;email.js&lt;br&gt;imgUR(cloud hosting)&lt;br&gt;cloudinary(not recommended)&lt;br&gt;upvote api&lt;br&gt;event api&lt;br&gt;pet-related resources&lt;br&gt;nearby dog parks&lt;br&gt;leaflet js&amp;nbsp;&lt;br&gt;map box" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="245" y="5" width="180" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="310" width="470" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="310" width="470" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="370" width="190" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="410" width="145" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="462" width="145" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="submit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="492" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Username" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="380" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Password" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="435" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="640" width="470" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Logged out homepage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="640" width="470" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Recent/random Posters&lt;br&gt;&lt;br&gt;If Logged in takes to users posts&lt;br&gt;else takes to pure login page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="670" width="120" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="710" width="190" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="750" width="145" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="802" width="145" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="submit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="832" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Username" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="720" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Password" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="775" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="960" width="470" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Logged out homepage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="960" width="470" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Recent/random Posters&lt;br&gt;&lt;br&gt;If Logged in takes to users posts&lt;br&gt;else takes to pure login page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="990" width="120" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Clicking on a post takes you to a post w/ comment page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1010" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="1010" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="215" y="1130" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="1130" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Post w/ comment page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="1280" width="470" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="1320" width="450" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="95" y="1330" width="275" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="1460" width="355" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="127.5" y="1490" width="355" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="127.5" y="1520" width="355" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
