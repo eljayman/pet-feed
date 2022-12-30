@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+    @apply  flex flex-nowrap  justify-between;
+}
+
+#title {
+    @apply text-lg font-bold  pl-1.5;
+}
