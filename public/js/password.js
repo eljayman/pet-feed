@@ -24,10 +24,10 @@ User.init(
       validate: {
         len: [8],
       },
-    pet:{
+      pet: {
         type: DataTypes.STRING,
-        allowNull:false, 
-    }
+        allowNull: false,
+      },
     },
   },
   {
@@ -38,7 +38,10 @@ User.init(
       },
       beforeUpdate: async (updatedUserData) => {
         if (updatedUserData.password) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+          updatedUserData.password = await bcrypt.hash(
+            updatedUserData.password,
+            10
+          );
         }
         return updatedUserData;
       },
