@@ -1,0 +1,17 @@
+[
+  {
+    "user_id": 1,
+    "post_id": 1,
+    "text": "It looks like Sauron is ready to rule over Mordor!"
+  },
+  {
+    "user_id": 2,
+    "post_id": 2,
+    "text": "Furrier, cuter, and more cuddly than the actor."
+  },
+  {
+    "user_id": 3,
+    "post_id": 3,
+    "text": "Eww, I hate rats."
+  }
+]
