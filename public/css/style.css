@@ -9,3 +9,11 @@
 #title {
     @apply text-lg font-bold  pl-1.5;
 }
+.form-input {
+    @apply border-2 border-accentgreen border-solid;
+    @apply text-sm  text-accentgreen pl-1;
+
+}
+.btn-primary{
+    @apply border-2 border-accentgreen border-solid; 
+}
