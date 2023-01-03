@@ -1,21 +1,6 @@
 
-<div class="border-4 border-black border-solid">
-  
-{{#each posts as |post|}}
-  <div class='post-card'>
-    <header>
-        <h2>
-          {{post.title}}
-        </h2>
-      </header>
-
-    <p>Posted by
-      {{post.user.pet_name}},
-      {{post.user.species}},
-      {{post.user.breed}}
-      on
-      {{post.date_created}}</p>
-    <p>{{post.description}}</p>
-  </div>
-{{/each}}
+<div class="inline-flex flex-row flex-wrap my-1.5 justify-center w-full">
+   {{#each posts as |post|}}
+    {{>postcard post = post}}
+  {{/each}}
 </div>
