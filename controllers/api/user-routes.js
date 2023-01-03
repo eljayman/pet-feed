@@ -12,6 +12,23 @@ const { User } = require('../../models');
 //   }
 // });
 
+router.get("/",async(req,res) => {
+  const user = {
+    pet_name: "petty",
+    species: "beta species 0.3",
+    breed: "out"
+  }
+  const post = {
+    posts: [
+    {
+      title: "beta species 0.3 test post"
+    },
+
+  ]
+  }
+
+  res.render("profilePage",{user, post})
+});
 
 router.post('/', async (req, res) => {
   try {
