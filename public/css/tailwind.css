@@ -575,6 +575,10 @@ video {
   justify-content: center;
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .border {
   border-width: 1px;
 }
