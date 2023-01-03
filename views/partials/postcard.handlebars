@@ -1,0 +1,18 @@
+<div class="m-1.5  w-80 border-4 border-black border-solid flex flex-col flex-initial">
+    <header class="flex-initial pr-2.5">
+        <h2 class="flex-initial pr-2.5">
+          {{post.title}}
+        </h2>
+      </header>
+      <hr/>
+      <br/>
+
+    <pclass="flex-initial pr-2.5">Posted by
+      {{post.user.pet_name}},
+      {{post.user.species}},
+      {{post.user.breed}}
+      on
+      {{post.date_created}}</p>
+      <br/>
+    <pclass="flex-initial pr-2.5">{{post.description}}</p>
+  </div>
