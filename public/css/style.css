@@ -12,7 +12,6 @@
 .form-input {
     @apply border-2 border-accentgreen border-solid;
     @apply text-sm  text-accentgreen pl-1;
-
 }
 .btn-primary{
     @apply border-2 border-accentgreen border-solid; 
