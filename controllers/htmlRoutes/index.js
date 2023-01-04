@@ -5,6 +5,6 @@ const createPost = require('./createPostPageRoutes');
 
 router.use('/', homepageRoutes);
 router.use('/login', loginpageRoutes);
-router.use('/createPost', createPost);
+router.use('/post', createPost);
 
 module.exports = router;
