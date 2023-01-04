@@ -24,6 +24,11 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+const middleware = {
+  withAuth,
+  upload,
+};
+
 //route to get blog by id
 router.get('/:id', withAuth, async (req, res) => {
   try {
@@ -92,7 +97,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
 router.post(
   '/createPost',
-  upload.single('post-picture'),
+  [middleware.withAuth, middleware.upload.single('post-picture')],
   async (req, res, next) => {
     try {
       const { title, description } = req.body;
