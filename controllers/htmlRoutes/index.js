@@ -6,7 +6,7 @@ const profilePageRoutes = require('./profilePageRoutes');
 
 router.use('/', homepageRoutes);
 router.use('/login', loginpageRoutes);
-router.use('/createPost', createPost);
+router.use('/post', createPost);
 router.use('/profile', profilePageRoutes);
 
 module.exports = router;

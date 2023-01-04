@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Post } = require('../../models/');
 const { Post, User, Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
@@ -65,6 +66,26 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(204).json(response);
   } catch (error) {
     res.status(500).json(error);
+  }
+});
+
+router.post('/createPost', withAuth, (req, res) => {
+  try {
+    const user_id = req.session.user_id;
+    const { title, description } = req.body;
+
+    const postObj = {
+      title,
+      description,
+      user_id,
+    };
+
+    const postRes = Post.create(postObj);
+
+    if (postRes) return res.status(200).json({ message: 'Post created!' });
+    return res.status(400).json({ message: 'Error in post creation' });
+  } catch (error) {
+    res.status(500).json({ message: 'Error in post creation' });
   }
 });
 
