@@ -1,6 +1,27 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
+const cloudinary = require('cloudinary').v2;
+require('dotenv').config();
+
+// Configuration
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET,
+});
+
+const multer = require('multer');
+const storage = multer.diskStorage({
+  destination: (req, file, db) => {
+    db(null, 'uploads');
+  },
+  filename: (req, file, cb) => {
+    console.log(file);
+    cb(null, 'myfile.jpg');
+  },
+});
+const upload = multer({ storage: storage });
 
 //route to get blog by id
 router.get('/:id', withAuth, async (req, res) => {
@@ -68,24 +89,32 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.post('/createPost', withAuth, (req, res) => {
-  try {
-    const user_id = req.session.user_id;
-    const { title, description } = req.body;
+router.post(
+  '/createPost',
+  upload.single('post-picture'),
+  async (req, res, next) => {
+    try {
+      console.log(req.file);
+      const response = await cloudinary.uploader.upload(req.file.path, {
+        public_id: 'HELL YEAH',
+      });
 
-    const postObj = {
-      title,
-      description,
-      user_id,
-    };
+      console.log(response);
 
-    const postRes = Post.create(postObj);
-
-    if (postRes) return res.status(200).json({ message: 'Post created!' });
-    return res.status(400).json({ message: 'Error in post creation' });
-  } catch (error) {
-    res.status(500).json({ message: 'Error in post creation' });
+      // const user_id = req.session.user_id;
+      // const { title, description } = req.body;
+      // const postObj = {
+      //   title,
+      //   description,
+      //   user_id,
+      // };
+      // const postRes = Post.create(postObj);
+      // if (postRes) return res.status(200).json({ message: 'Post created!' });
+      // return res.status(400).json({ message: 'Error in post creation' });
+    } catch (error) {
+      res.status(500).json({ message: 'Error in post creation' });
+    }
   }
-});
+);
 
 module.exports = router;
