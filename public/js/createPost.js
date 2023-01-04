@@ -9,15 +9,18 @@ async function handlePostSubmit() {
     return alert('Please enter a title and description!');
   }
 
-  console.log(title, description);
-
   const res = await fetch('/api/post/createPost', {
     method: 'POST',
     body: JSON.stringify({ title, description }),
     headers: { 'Content-Type': 'application/json' },
   });
 
-  console.log(res);
+  if (res.ok) {
+    alert('Post Created Successfully!');
+    return window.location.replace('/');
+  }
+
+  alert('Error in post creation, please try again later');
 }
 
 $('#create-post-form').submit(function (event) {
