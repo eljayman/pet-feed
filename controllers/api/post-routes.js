@@ -34,19 +34,6 @@ router.get('/:id', withAuth, async (req, res) => {
 });
 
 //new post route uses session data for user_id and request body
-router.post('/', withAuth, async (req, res) => {
-  try {
-    //new post
-    const postData = await Post.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-    //response
-    res.status(200).json(postData);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
 
 //update route for post
 router.patch('/:id', withAuth, async (req, res) => {
