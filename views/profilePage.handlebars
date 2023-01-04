@@ -1,7 +1,12 @@
-<div class="flex flex-row flex-nowrap">
-    {{>profileInfo}}
-<div class="flex flex-col justify-center">
-    <p class="self-end border border-solid border-pettext text-center ">+</p>
-        {{>postOverview post=post}}
+<div class=" h-full flex flex-row"> 
+    {{>profileInfo user = plainData}}
+    <div class="flex flex-col w-full m-4">
+        <h3 class="self-end border-2 border-solid border-pettext"> + </h3>
+        <div class="inline-flex flex-row flex-wrap my-1.5 justify-arround w-full">
+             {{#each plainPost as |post|}}
+                {{>postcard post = post}}
+            {{/each}}
+        </div>
+    </div>
 </div>
-</div>
+
