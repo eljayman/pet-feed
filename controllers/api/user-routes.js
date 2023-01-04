@@ -12,47 +12,13 @@ const { User } = require('../../models');
 //   }
 // });
 
-// Login
-router.post('/login', async (req, res) => {
-  try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+router.post('/createUser', async (req, res) => {
+  console.log(req.body);
 
-    if (!userData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect credentials, please try again EMAIL' });
-      return;
-    }
-
-    const validPassword = await userData.validatePassword(req.body.password);
-
-    if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect credentials, please try again PASSWORD' });
-    }
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.json({ user: userData, message: 'Login Successfull!' });
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
-
-    //   req.session.save(() => {
-    //     req.session.user_id = userData.id;
-    //     req.session.logged_in = true;
-
+    console.log({ userData });
     res.status(200).json(userData);
-    //   });
   } catch (err) {
     res.status(400).json(err);
   }
