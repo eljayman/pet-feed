@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const { Comment } = require('../../models/');
+const { Comment, User, Post } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     //find post by query param
     const commentData = await Post.findOne({
@@ -22,7 +23,7 @@ router.get('/', async (req, res) => {
     const comment = commentData.get({ plain: true });
     // render comment
     res.status(200).json(comment);
-      } catch (error) {
+  } catch (error) {
     res.status(500).json(error);
   }
 });
