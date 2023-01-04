@@ -25,11 +25,7 @@ router.get('/:id', withAuth, async (req, res) => {
     // render comment
     res.json(comment);
     //uncomment this when ready for front-end rendering
-    // res.render('comment', {
-    //   comment,
-    //   logged_in: req.session.logged_in,
-    // });
-  } catch (error) {
+      } catch (error) {
     res.status(500).json(error);
   }
 });
