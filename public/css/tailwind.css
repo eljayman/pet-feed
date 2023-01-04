@@ -575,6 +575,10 @@ video {
   justify-content: center;
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .border {
   border-width: 1px;
 }
@@ -638,6 +642,25 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
+}
+
+.form-input {
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(3 43 19 / var(--tw-border-opacity));
+  padding-left: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(3 43 19 / var(--tw-text-opacity));
+}
+
+.btn-primary {
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(3 43 19 / var(--tw-border-opacity));
 }
 
 .hover\:text-texthover:hover {

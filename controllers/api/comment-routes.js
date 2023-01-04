@@ -1,9 +1,7 @@
 const router = require('express').Router();
-const { Comment, User, Post } = require('../../models/');
-const withAuth = require('../../utils/auth');
+const { Comment } = require('../../models/');
 
-//find all comments associated with a post = req.params.id
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     //find post by query param
     const commentData = await Post.findOne({
@@ -23,8 +21,7 @@ router.get('/:id', withAuth, async (req, res) => {
     });
     const comment = commentData.get({ plain: true });
     // render comment
-    res.json(comment);
-    //uncomment this when ready for front-end rendering
+    res.status(200).json(comment);
       } catch (error) {
     res.status(500).json(error);
   }
@@ -42,7 +39,7 @@ router.post('/:id', withAuth, async (req, res) => {
     //response
     res.status(200).json(newComment);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).console.log(err);
   }
 });
 
