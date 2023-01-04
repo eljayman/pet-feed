@@ -1,17 +1,18 @@
 async function handlePostSubmit() {
-  // const title = $('#post-title').val().trim();
-  // const description = $('#description').val().trim();
+  const title = $('#post-title').val().trim();
+  const description = $('#description').val().trim();
 
-  // $('#post-title').val('');
-  // $('#description').val('');
+  $('#post-title').val('');
+  $('#description').val('');
 
-  // if (!title || !description) {
-  //   return alert('Please enter a title and description!');
-  // }
+  if (!title || !description) {
+    return alert('Please enter a title and description!');
+  }
 
   const form = document.getElementById('create-post-form');
   const formData = new FormData(form);
-  console.log(form, formData);
+  formData.append('title', title);
+  formData.append('description', description);
 
   const res = await fetch('/api/post/createPost', {
     method: 'POST',

@@ -3,6 +3,7 @@ const { Post, User, Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
 const cloudinary = require('cloudinary').v2;
 require('dotenv').config();
+const { v4: uuidv4 } = require('uuid');
 
 // Configuration
 cloudinary.config({
@@ -94,23 +95,26 @@ router.post(
   upload.single('post-picture'),
   async (req, res, next) => {
     try {
-      console.log(req.file);
+      const { title, description } = req.body;
+      const user_id = req.session.user_id;
+      const uniqueImageName = uuidv4();
+
       const response = await cloudinary.uploader.upload(req.file.path, {
-        public_id: 'HELL YEAH',
+        public_id: uniqueImageName,
       });
 
-      console.log(response);
+      const { secure_url: image_url } = response;
 
-      // const user_id = req.session.user_id;
-      // const { title, description } = req.body;
-      // const postObj = {
-      //   title,
-      //   description,
-      //   user_id,
-      // };
-      // const postRes = Post.create(postObj);
-      // if (postRes) return res.status(200).json({ message: 'Post created!' });
-      // return res.status(400).json({ message: 'Error in post creation' });
+      const postObj = {
+        title,
+        description,
+        user_id,
+        image_url,
+      };
+
+      const postRes = Post.create(postObj);
+      if (postRes) return res.status(200).json({ message: 'Post created!' });
+      return res.status(400).json({ message: 'Error in post creation' });
     } catch (error) {
       res.status(500).json({ message: 'Error in post creation' });
     }
