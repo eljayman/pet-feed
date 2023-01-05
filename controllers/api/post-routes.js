@@ -1,6 +1,33 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
+const cloudinary = require('cloudinary').v2;
+require('dotenv').config();
+const { v4: uuidv4 } = require('uuid');
+
+// Configuration
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET,
+});
+
+const multer = require('multer');
+const storage = multer.diskStorage({
+  destination: (req, file, db) => {
+    db(null, 'uploads');
+  },
+  filename: (req, file, cb) => {
+    console.log(file);
+    cb(null, 'myfile.jpg');
+  },
+});
+const upload = multer({ storage: storage });
+
+const middleware = {
+  withAuth,
+  upload,
+};
 
 //route to get blog by id
 router.get('/:id', withAuth, async (req, res) => {
@@ -68,24 +95,35 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.post('/createPost', withAuth, (req, res) => {
-  try {
-    const user_id = req.session.user_id;
-    const { title, description } = req.body;
+router.post(
+  '/createPost',
+  [middleware.withAuth, middleware.upload.single('post-picture')],
+  async (req, res, next) => {
+    try {
+      const { title, description } = req.body;
+      const user_id = req.session.user_id;
+      const uniqueImageName = uuidv4();
 
-    const postObj = {
-      title,
-      description,
-      user_id,
-    };
+      const response = await cloudinary.uploader.upload(req.file.path, {
+        public_id: uniqueImageName,
+      });
 
-    const postRes = Post.create(postObj);
+      const { secure_url: image_url } = response;
 
-    if (postRes) return res.status(200).json({ message: 'Post created!' });
-    return res.status(400).json({ message: 'Error in post creation' });
-  } catch (error) {
-    res.status(500).json({ message: 'Error in post creation' });
+      const postObj = {
+        title,
+        description,
+        user_id,
+        image_url,
+      };
+
+      const postRes = Post.create(postObj);
+      if (postRes) return res.status(200).json({ message: 'Post created!' });
+      return res.status(400).json({ message: 'Error in post creation' });
+    } catch (error) {
+      res.status(500).json({ message: 'Error in post creation' });
+    }
   }
-});
+);
 
 module.exports = router;

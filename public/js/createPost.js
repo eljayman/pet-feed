@@ -9,10 +9,14 @@ async function handlePostSubmit() {
     return alert('Please enter a title and description!');
   }
 
+  const form = document.getElementById('create-post-form');
+  const formData = new FormData(form);
+  formData.append('title', title);
+  formData.append('description', description);
+
   const res = await fetch('/api/post/createPost', {
     method: 'POST',
-    body: JSON.stringify({ title, description }),
-    headers: { 'Content-Type': 'application/json' },
+    body: formData,
   });
 
   if (res.ok) {

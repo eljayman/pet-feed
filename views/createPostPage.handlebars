@@ -1,7 +1,7 @@
 <div class="row justify-space-between-md">
   <div class="post-card">
     <h2 class="page-title">New Post</h2>
-    <form class="form post-form" id="create-post-form">
+    <form class="form post-form" id="create-post-form" enctype="multipart/form-data">
       <div class="form-group">
         <label for="post-title">Title:</label>
         <input class="form-input" type="text" id="post-title" />
@@ -9,6 +9,10 @@
       <div class="form-group">
         <label for="description">Description:</label>
         <input class="form-input" type="text" id="description" />
+      </div>
+      <div class="form-group">
+        <label for="picture">Choose a picture for this post:</label>
+        <input class="form-input" type="file" id="picture" name="post-picture" accept=".png, .jpg"/>
       </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit" id="post-submit">Post</button>
