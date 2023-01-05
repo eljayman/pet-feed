@@ -1,0 +1,57 @@
+.post-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 68px);
+}
+
+.post-card {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 400px;
+  padding: 30px;
+  margin: 50px;
+}
+
+.post-card-title {
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.form-group label:not(.upload-btn) {
+  min-width: 40%;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.form-group input,
+.form-group textarea {
+  min-width: 60%;
+}
+
+.form-group input[type='file'] {
+  display: none;
+}
+
+.submit-btn,
+.upload-btn {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 12px 32px;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover,
+.upload-btn:hover {
+  cursor: pointer;
+  color: #fff !important;
+  background-color: #1f3a52 !important;
+}

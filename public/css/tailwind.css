@@ -615,7 +615,7 @@ video {
   border-color: rgb(208 218 241 / var(--tw-border-opacity));
 }
 
-.bg-petgreen {
+/* .bg-petgreen {
   --tw-bg-opacity: 1;
   background-color: rgb(5 71 32 / var(--tw-bg-opacity));
 }
@@ -623,7 +623,7 @@ video {
 .bg-accentgreen {
   --tw-bg-opacity: 1;
   background-color: rgb(3 43 19 / var(--tw-bg-opacity));
-}
+} */
 
 .pt-5 {
   padding-top: 1.25rem;
@@ -663,12 +663,10 @@ video {
   border-width: 2px;
   border-style: solid;
   --tw-border-opacity: 1;
-  border-color: rgb(3 43 19 / var(--tw-border-opacity));
   padding-left: 0.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(3 43 19 / var(--tw-text-opacity));
 }
 
 .btn-primary {

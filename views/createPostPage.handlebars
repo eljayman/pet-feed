@@ -1,25 +1,52 @@
-<div class="row justify-space-between-md">
-  <div class="post-card">
-    <h2 class="page-title">New Post</h2>
-    <form class="form post-form" id="create-post-form" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="post-title">Title:</label>
-        <input class="form-input" type="text" id="post-title" />
+<link rel='stylesheet' href='/css/pages/post.css' />
+
+<div class='post-form-wrapper'>
+  <div class='post-card theme-d3'>
+    <h2 class='post-card-title'>New Post</h2>
+    <form
+      class='form post-form'
+      id='create-post-form'
+      enctype='multipart/form-data'
+    >
+      <div class='form-group'>
+        <label for='post-title'>Title:</label>
+        <input class='form-input theme-l5' type='text' id='post-title' />
       </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        <input class="form-input" type="text" id="description" />
+      <div class='form-group'>
+        <label for='description'>Description:</label>
+        <textarea
+          class='form-input theme-l5'
+          type='text'
+          id='description'
+        ></textarea>
       </div>
-      <div class="form-group">
-        <label for="picture">Choose a picture for this post:</label>
-        <input class="form-input" type="file" id="picture" name="post-picture" accept=".png, .jpg"/>
+      <div class='form-group'>
+        <label class='upload-btn theme-d5' for='picture'><i
+            class='fa-solid fa-cloud-arrow-up'
+          ></i>
+          Upload A Picture!</label>
+        <input
+          class='form-input'
+          type='file'
+          id='picture'
+          name='post-picture'
+          accept='.png, .jpg'
+        />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit" id="post-submit">Post</button>
+      <div class='form-group'>
+        <button
+          class='submit-btn theme-d5'
+          type='submit'
+          id='post-submit'
+        >Post</button>
       </div>
     </form>
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-<script src="../js/createPost.js"></script>
+<script
+  src='https://code.jquery.com/jquery-3.6.3.min.js'
+  integrity='sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU='
+  crossorigin='anonymous'
+></script>
+<script src='../js/createPost.js'></script>

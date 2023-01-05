@@ -1,4 +1,6 @@
 async function handlePostSubmit() {
+  const $postButton = $('#post-submit');
+  $postButton.text('Loading, Please Wait...');
   const title = $('#post-title').val().trim();
   const description = $('#description').val().trim();
 
@@ -6,6 +8,7 @@ async function handlePostSubmit() {
   $('#description').val('');
 
   if (!title || !description) {
+    $postButton.text('Post');
     return alert('Please enter a title and description!');
   }
 
@@ -20,10 +23,12 @@ async function handlePostSubmit() {
   });
 
   if (res.ok) {
+    $postButton.text('Success!');
     alert('Post Created Successfully!');
     return window.location.replace('/');
   }
 
+  $postButton.text('Post');
   alert('Error in post creation, please try again later');
 }
 
