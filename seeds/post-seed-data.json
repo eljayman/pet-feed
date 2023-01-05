@@ -2,21 +2,25 @@
     {
         "title":"Saurons first day in the squad",
         "description": "Sauron looking hot looking over his new digs",
-        "user_id": 2
+        "user_id": 2,
+        "image_url": "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
     },
     {
         "title": "Liam Neesons day out",
         "description": "Look at how cute I am :D IM THE CUTEST FURBABY EVAARRRR",
-        "user_id": 3
+        "user_id": 3,
+        "image_url": "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
     },
     {
         "title": "New family rat",
         "description" : "Comment names for our new rat! most upvoted comment will win. boatyMcBoatFace is automatically disqualified >:(",
-        "user_id": 1
+        "user_id": 1,
+        "image_url": "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
     },
     {
         "title": "My poor rat died",
         "description": "I AM SO DEVASTATED MY POOR RAT DIED M8. PLZ SEND LOVE AND PRAYERS FOR MY BORKEN HOME",
-        "user_id": 1
+        "user_id": 1,
+        "image_url": "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
     }
 ]
