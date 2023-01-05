@@ -1,27 +1,20 @@
 const router = require('express').Router();
 const { Post, User } = require('../../models');
-const withAuth = require('../../utils/auth')
+const withAuth = require('../../utils/auth');
 
-router.get('/:id', async (req,res) => {
-  try{
-    console.log("profile page route");
-    const userData = await User.findByPk(req.params.id);
-    const plainData = userData.get({ plain: true });
-
-    const postData = await Post.findAll({
-      where: { user_id: req.params.id },
+router.get('/', async (req, res) => {
+  try {
+    const userData = await User.findOne({
+      where: { id: req.session.user_id },
+      attributes: { exclude: ['password'] },
+      include: Post,
     });
-    const plainPost = postData.map(post => post.get({plain: true}));
-    
-    const loggedIn = { loggedIn: req.session.logged_in}
-    res.render('profilePage', 
-    { 
-      plainData, 
-      plainPost, 
-      loggedIn
-  });
+    const user = userData.get({ plain: true });
+    res.render('profilePage', {
+      user,
+      loggedIn: req.session.logged_in,
+    });
   } catch (err) {
-    console.log("error in profile")
     res.status(500).json(err);
   }
 });
