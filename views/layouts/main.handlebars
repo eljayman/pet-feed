@@ -8,7 +8,7 @@
     <title>PetFeed</title>
   </head>
   <body class="theme-l1">
-    {{> header}}
+    {{> nav}}
     <main>
       {{{body}}}
 
@@ -16,5 +16,8 @@
 
     <script src="https://kit.fontawesome.com/48a7f32bdc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+{{#if loggedIn}}
+<script src='/js/logout.js'></script>
+{{/if}}
   </body>
 </html>

@@ -13,8 +13,6 @@ const withAuth = require('../../utils/auth');
 //   }
 // });
 
-
-
 router.post('/createUser', async (req, res) => {
   console.log(req.body);
   try {
@@ -30,6 +28,7 @@ router.post('/createUser', async (req, res) => {
   }
 });
 
+//api logout route
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
