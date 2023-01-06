@@ -61,7 +61,7 @@ router.delete('/', withAuth, (req, res) => {
 });
 
 //update pet route updates the user's pet name species and breed for current user
-router.patch('/pet/', withAuth, async (req, res) => {
+router.patch('/pet', withAuth, async (req, res) => {
   try {
     const response = await User.update(
       {
@@ -82,23 +82,24 @@ router.patch('/pet/', withAuth, async (req, res) => {
 });
 
 //updates current user's user_name
-router.patch('/user_name', withAuth, async (req, res) => {
-  try {
-    const response = await User.update(
-      {
-        user_name: req.body.user_name,
-        //updates user_name
-      },
-      {
-        where: { id: req.session.id },
-      }
-    );
-    // return positive response
-    res.status(200).json(response);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
+//user name isn't used in any views
+// router.patch('/user-name', withAuth, async (req, res) => {
+//   try {
+//     const response = await User.update(
+//       {
+//         user_name: req.body.user_name,
+//         //updates user_name
+//       },
+//       {
+//         where: { id: req.session.user_id },
+//       }
+//     );
+//     // return positive response
+//     res.status(200).json(response);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
 
 //updates current user's email address
 router.patch('/email', withAuth, async (req, res) => {
@@ -109,7 +110,7 @@ router.patch('/email', withAuth, async (req, res) => {
         //updates email
       },
       {
-        where: { id: req.session.id },
+        where: { id: req.session.user_id },
       }
     );
     // return positive response
@@ -122,15 +123,15 @@ router.patch('/email', withAuth, async (req, res) => {
 //updates current user's password
 router.patch('/password', withAuth, async (req, res) => {
   try {
-    const response = await User.update(
+    const response = await User.findOne(
       {
-        password: req.body.password,
-        //updates password hooks will has before serializing
-      },
-      {
-        where: { id: req.session.id },
+        where: { id: req.session.user_id },
       }
     );
+    response.update({
+            //hook will hash before serializing
+      password: req.body.password,
+    });
     // return positive response
     res.status(200).json(response);
   } catch (error) {

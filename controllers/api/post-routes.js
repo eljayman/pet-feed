@@ -29,7 +29,7 @@ const middleware = {
   upload,
 };
 
-//route to get blog by id
+//route to get post by id
 router.get('/:id', withAuth, async (req, res) => {
   try {
     //find blog by query param

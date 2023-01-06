@@ -8,7 +8,6 @@ router.get('/', withAuth, async (req, res) => {
       //gets all posts, comments and users
       include: [
         {
-          model: Comment,
           model: User,
           attributes: { exclude: ['password'] },
         },
