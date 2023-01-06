@@ -1,19 +1,19 @@
 <div class='postcard'>
   <div class='flex-initial pr-2.5'>
     <h2 class='flex-initial pr-2.5'>
-      {{post.title}}
+      {{title}}
     </h2>
   </div>
   <hr />
   <br />
 
   <p class='flex-initial pr-2.5'>Posted by
-    {{post.user.pet_name}},
-    {{post.user.species}},
-    {{post.user.breed}}
+    {{user.pet_name}},
+    {{user.species}},
+    {{user.breed}}
     on
-    {{post.date_created}}</p>
-  <img src='{{post.image_url}}' />
+    {{date_created}}</p>
+  <img src='{{image_url}}' />
   <br />
-  <p class='flex-initial pr-2.5'>{{post.description}}</p>
+  <p class='flex-initial pr-2.5'>{{description}}</p>
 </div>
