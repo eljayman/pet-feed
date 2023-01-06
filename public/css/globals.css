@@ -4,3 +4,30 @@
 .theme-d1 {color:#fff !important; background-color:#77a3ca !important}
 .theme-d3 {color:#fff !important; background-color:#4681b4 !important}
 .theme-d5 {color:#fff !important; background-color:#325c81 !important}
+
+.navbar {
+  padding: 30px 0 !important;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  margin-left: 20px !important;
+  font-size: 25px !important;
+}
+
+.nav {
+  display: flex;
+  margin-right: 40px;
+}
+
+.nav-icon {
+  margin: auto 20px;
+  font-size: xx-large;
+  text-shadow: 0 0 5px black;
+}
+
+@media screen and(max-width: 400px) {
+  .navbar {
+    
+  }
+}
