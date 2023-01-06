@@ -40,7 +40,36 @@ router.post('/:id', withAuth, async (req, res) => {
     //response
     res.status(200).json(newComment);
   } catch (err) {
-    res.status(500).console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//comment patch route
+router.patch('/:id', withAuth, async (req, res) => {
+  try {
+    //update comment text using :id param
+    const updatedComment = await Comment.update({
+      text: req.body.text,
+      where: { id: req.params.id },
+    });
+    //response
+    res.status(200).json(updatedComment);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+//delete comment route
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    //delete comment with :id param
+    const response = await Comment.destroy({
+      where: { id: req.params.id },
+    });
+    //response
+    res.status(204).json(response);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
