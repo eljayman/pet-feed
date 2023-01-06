@@ -1,0 +1,14 @@
+<nav class='navbar pt-5 pb-5 theme-d5'>
+  <a href='/' id='nav-home'>
+    <h1 class='text-inherit flex-initial' id='title'>PetFeed</h1>
+  </a>
+  <ul>
+     {{#if loggedIn}}
+    <li><a href='/profile' class='flex-initial pr-2.5'id='profile-link'>My Profile</a></li>
+     <li><a href='/login' class='flex-initial pr-2.5'id='nav-logout'>Logout</a></li>
+      {{else}}
+        <a href='/login' class='flex-initial pr-2.5'id='nav-login'>Login</a>
+      {{/if}}
+    </a>
+  </ul>
+</nav>
