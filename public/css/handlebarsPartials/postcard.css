@@ -1,0 +1,12 @@
+.postcard {
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+  width: 400px;
+}
+
+.postcard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
