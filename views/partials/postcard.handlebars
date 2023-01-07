@@ -1,19 +1,29 @@
-<div class='postcard'>
-  <div class='flex-initial pr-2.5'>
+<link rel='stylesheet' href='/css/handlebarsPartials/postcard.css' />
+<div class='postcard theme-d3'>
+  <div class='postcard-title'>
     <h2 class='flex-initial pr-2.5'>
       {{title}}
     </h2>
   </div>
-  <hr />
-  <br />
 
-  <p class='flex-initial pr-2.5'>Posted by
-    {{user.pet_name}},
-    {{user.species}},
-    {{user.breed}}
-    on
-    {{format_date createdAt}}</p>
-  <img src='{{image_url}}' />
-  <br />
+  <div class='postcard-info'>Posted by
+    <span class='petname'>{{post.user.pet_name}}
+      <div class='petname-tooltip theme-d5'>
+        <p>Owner: {{post.user.user_name}}</p>
+        <p>Species: {{post.user.species}}</p>
+        <p>Breed: {{post.user.breed}}</p>
+        <p>Date: {{format_date post.createdAt}}</p>
+      </div>
+    </span>
+  </div>
+  <div class='petname-tooltip'>
+    {{post.user.user_name}}
+    {{post.user.species}}
+    {{post.user.breed}}
+    {{format_date post.createdAt}}
+  </div>
+  <div class='post-img-wrapper'>
+    <img class='post-img' src='{{post.image_url}}' />
+  </div>
   <p class='flex-initial pr-2.5'>{{description}}</p>
 </div>
