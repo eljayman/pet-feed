@@ -1,11 +1,20 @@
 <div class='w-1/5 h-full border-2 border-solid border-pettext'>
-  <h1 class='mx-1 my-0.5'>{{pet_name}}</h1>
+  <h1 class="text-center font-bold">Profile</h1>
+  <h2>{{user_name}}</h2>
+  <h2>{{email}}</h2>
+  <hr/>
+  <br/>
+  <h2>Pet Info</h2>
   <hr />
+  <h1 class='mx-1 my-0.5'>{{pet_name}}</h1>
   <h2 class='mx-1 my-0.5'>{{species}}</h2>
   <h2 class='mx-1 my-0.5'>{{breed}}</h2>
+  <br/>
+  <br/>
   <section class='profile-links'>
     <ul>
       <li><a href='/update-pet/'>Update Pet</a></li>
+      <li><a href='/update-username/'>Change your username</a></li>
       <li><a href='/update-email/'>Update your email address</a></li>
       <li><a href='/update-password/'>Change your password</a></li>
     </ul>

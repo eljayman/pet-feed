@@ -4,7 +4,7 @@
         
         <div class="inline-flex flex-row flex-wrap my-1.5 justify-arround w-full">
              {{#each posts as |post|}}
-                {{>postcard post}}
+                {{>postcard post = post}}
             {{/each}}
         </div>
     </div>

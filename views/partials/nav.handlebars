@@ -1,15 +1,40 @@
-<nav class='navbar pt-5 pb-5 theme-d5'>
+<nav class='navbar theme-d5'>
   <a href='/' id='nav-home'>
-    <h1 class='text-inherit flex-initial' id='title'>PetFeed</h1>
+    <h1 class='page-title' id='title'>PetFeed</h1>
   </a>
-  <ul>
-     {{#if loggedIn}}
-    <li><a href='/profile' class='flex-initial pr-2.5'id='profile-link'>My Profile</a></li>
-    <li><a href='/post' class='flex-initial pr-2.5' id='new-post-link'>New Post</a></li>
-     <li><a href='/login' class='flex-initial pr-2.5'id='nav-logout'>Logout</a></li>
-      {{else}}
-        <a href='/login' class='flex-initial pr-2.5'id='nav-login'>Login</a>
-      {{/if}}
-    </a>
+  <ul class='nav'>
+    {{#if loggedIn}}
+      <li class='nav-li'>
+        <a href='/' class='nav-icon' id='profile-link'>
+          <i class='fa-solid fa-house'></i>
+        </a>
+        <div class='nav-tooltip theme-d3'>Home</div>
+      </li>
+      <li class='nav-li'>
+        <a href='/post' class='nav-icon' id='profile-link'>
+          <i class='fa-regular fa-square-plus'></i>
+        </a>
+        <div class='nav-tooltip theme-d3'>Create Post</div>
+      </li>
+      <li class='nav-li'>
+        <a href='/profile' class='nav-icon' id='profile-link'>
+          <i class='fa-solid fa-user'></i>
+        </a>
+        <div class='nav-tooltip theme-d3'>Profile</div>
+      </li>
+      <li class='nav-li'>
+        <a href='/login' class='nav-icon' id='nav-logout'>
+          <i class='fa-solid fa-arrow-right-from-bracket'></i>
+        </a>
+        <div class='nav-tooltip theme-d3'>Logout</div>
+      </li>
+    {{else}}
+      <li class='nav-li'>
+        <a href='/login' class='nav-icon' id='nav-login'>
+          <i class='fa-solid fa-right-to-bracket'></i>
+        </a>
+        <div class='nav-tooltip'>Login</div>
+      </li>
+    {{/if}}
   </ul>
 </nav>
