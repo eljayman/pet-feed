@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
+const { User } = require('../../models');
 
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -8,18 +8,10 @@ router.get('/', withAuth, async (req, res) => {
       where: { id: req.session.user_id },
       attributes: { exclude: ['password'] },
     });
-    const postData = await Post.findAll({
-      where: { user_id: req.session.user_id },
-      include: { model: User, attributes: { exclude: ['password'] } },
-    });
     const user = userData.get({ plain: true });
-    const posts = postData.map((post) => {
-      return post.get({ plain: true });
-    });
 
-    res.render('profilePage', {
+    res.render('update-password', {
       user,
-      posts,
       loggedIn: req.session.logged_in,
     });
   } catch (err) {
