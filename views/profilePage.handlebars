@@ -1,7 +1,7 @@
 <div class=" h-full flex flex-row"> 
     {{>profileInfo user }}
     <div class="flex flex-col w-full m-4">
-        <h3 class="self-end border-2 border-solid border-pettext"> + </h3>
+        
         <div class="inline-flex flex-row flex-wrap my-1.5 justify-arround w-full">
              {{#each posts as |post|}}
                 {{>postcard post = post}}

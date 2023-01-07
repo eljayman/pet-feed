@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .navbar {
-    @apply  flex flex-nowrap  justify-between;
+  @apply flex flex-nowrap  justify-between;
 }
 
 #title {
-    @apply text-lg font-bold  pl-1.5;
+  @apply text-lg font-bold  pl-1.5;
 }
 .form-input {
-    @apply border-2 border-accentgreen border-solid;
-    @apply text-sm  text-accentgreen pl-1;
+  @apply border-2 border-accentgreen border-solid;
+  @apply text-sm  text-accentgreen pl-1;
 }
-.btn-primary{
-    @apply border-2 border-accentgreen border-solid; 
+.btn-primary {
+  @apply flex-nowrap align-center;
 }

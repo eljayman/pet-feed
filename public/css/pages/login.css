@@ -10,9 +10,9 @@
 .login-card {
   border: 2px solid black;
   border-radius: 5px;
-  width: 400px;
+  width: 450px;
   padding: 30;
-  margin: 30
+  margin: 30;
 }
 
 .login-card-title {
@@ -37,7 +37,7 @@
 }
 
 .form-group input {
- min-width: 60%; 
+  min-width: 60%;
 }
 
 .login-btn {
@@ -45,9 +45,10 @@
   border-radius: 5px;
   padding: 8px 16px;
   border: 2px solid rgb(43, 43, 43);
-  transition: color .2s ease, background-color .2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .login-btn:hover {
-  color:#fff !important; background-color:#1f3a52 !important
+  color: #fff !important;
+  background-color: #1f3a52 !important;
 }

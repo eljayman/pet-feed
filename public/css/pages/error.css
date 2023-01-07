@@ -1,0 +1,20 @@
+.error-card {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 400px;
+    padding: 30px;
+    margin: 50px;
+  }
+  
+  .error-card-title {
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .error-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .error-text {
+    text-align: center;
+  }
