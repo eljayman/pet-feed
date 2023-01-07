@@ -5,10 +5,9 @@ const withAuth = require('../../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
-      //gets all posts, comments and users
+      //gets all posts
       include: [
         {
-          model: Comment,
           model: User,
           attributes: { exclude: ['password'] },
         },
