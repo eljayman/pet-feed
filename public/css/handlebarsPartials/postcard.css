@@ -1,8 +1,10 @@
 .postcard {
   padding: 30px;
   margin: 40px;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 400px;
+  border: 2px solid black;
+  box-shadow: 0 0 20px black;
 }
 
 .postcard-title {
@@ -58,13 +60,20 @@
 }
 
 .post-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 340px;
   height: 340px;
   margin-bottom: 20px;
 }
 
 .post-img {
-  width: 100%;
-  height: 100%;
+  border: 1px solid black;
+  width: 'auto';
+  height: 'auto';
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+  border-radius: 5px;
 }
