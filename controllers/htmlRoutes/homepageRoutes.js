@@ -16,7 +16,6 @@ router.get('/', withAuth, async (req, res) => {
     //parses the data for rendering
     const posts = postData.map((post) => post.get({ plain: true }));
     //renders homepage with the posts
-    res.json(posts);
     res.render('home', {
       posts,
       loggedIn: req.session.logged_in,
