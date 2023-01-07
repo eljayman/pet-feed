@@ -13,6 +13,7 @@ const handlePetUpdate = (e) => {
       },
     }).then((response) => {
       if (response.ok) {
+        alert('Successfully updated pet!');
         return location.assign('/profile');
       }
     });

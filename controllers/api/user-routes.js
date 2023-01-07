@@ -74,6 +74,7 @@ router.patch('/pet', withAuth, async (req, res) => {
         where: { id: req.session.user_id },
       }
     );
+
     // return positive response
     res.status(200).json(response);
   } catch (error) {
@@ -81,25 +82,23 @@ router.patch('/pet', withAuth, async (req, res) => {
   }
 });
 
-//updates current user's user_name
-//user name isn't used in any views
-// router.patch('/user-name', withAuth, async (req, res) => {
-//   try {
-//     const response = await User.update(
-//       {
-//         user_name: req.body.user_name,
-//         //updates user_name
-//       },
-//       {
-//         where: { id: req.session.user_id },
-//       }
-//     );
-//     // return positive response
-//     res.status(200).json(response);
-//   } catch (error) {
-//     res.status(500).json(error);
-//   }
-// });
+// Updates the current users Username
+router.patch('/user-name', withAuth, async (req, res) => {
+  try {
+    const response = await User.update(
+      {
+        user_name: req.body.user_name,
+      },
+      {
+        where: { id: req.session.user_id },
+      }
+    );
+    // return positive response
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 
 //updates current user's email address
 router.patch('/email', withAuth, async (req, res) => {
@@ -123,13 +122,11 @@ router.patch('/email', withAuth, async (req, res) => {
 //updates current user's password
 router.patch('/password', withAuth, async (req, res) => {
   try {
-    const response = await User.findOne(
-      {
-        where: { id: req.session.user_id },
-      }
-    );
+    const response = await User.findOne({
+      where: { id: req.session.user_id },
+    });
     response.update({
-            //hook will hash before serializing
+      //hook will hash before serializing
       password: req.body.password,
     });
     // return positive response

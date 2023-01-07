@@ -11,6 +11,7 @@ const handleEmailUpdate = (e) => {
       },
     }).then((response) => {
       if (response.ok) {
+        alert('Email updated successfully');
         return location.assign('/profile');
       }
     });

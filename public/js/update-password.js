@@ -14,6 +14,7 @@ const handlePasswordUpdate = (e) => {
       },
     }).then((response) => {
       if (response.ok) {
+        alert('Password updated successfully');
         return location.assign('/profile');
       }
     });
