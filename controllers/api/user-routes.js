@@ -136,4 +136,23 @@ router.patch('/password', withAuth, async (req, res) => {
   }
 });
 
+//update current user's username
+router.patch('/username', withAuth, async (req, res) => {
+  try {
+
+    const response = await User.update(
+      {
+        user_name: req.body.username,
+      },
+      {
+        where: { id: req.session.user_id },
+      }
+    );
+    // return positive response
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;
