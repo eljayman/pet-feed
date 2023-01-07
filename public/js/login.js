@@ -29,24 +29,28 @@ const signUpHandler = async (event) => {
   const user_name = $('#username-signup').val().trim();
   const email = $('#email-signup').val().trim();
   const password = $('#password-signup').val().trim();
+  const confirm = $('#password-signup-confirm').val().trim();
   const pet_name = $('#petname-signup').val().trim();
   const species = $('#petspecies-signup').val().trim();
   const breed = $('#petbreed-signup').val().trim();
 
   const userObj = { user_name, email, password, pet_name, species, breed };
+  if (password === confirm) {
+    const res = await fetch('/api/user/createUser', {
+      method: 'POST',
+      body: JSON.stringify(userObj),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-  const res = await fetch('/api/user/createUser', {
-    method: 'POST',
-    body: JSON.stringify(userObj),
-    headers: { 'Content-Type': 'application/json' },
-  });
-
-  if (res.ok) {
-    return alert('Account created, you may now sign in!');
+    if (res.ok) {
+      return location.replace('/profile');
+    }
+    alert(
+      'Error in account creation, ensure that all fields are filled out correctly'
+    );
+  } else {
+    alert('Passwords must match');
   }
-  alert(
-    'Error in account creation, ensure that all fields are filled out correctly'
-  );
 };
 
 document
