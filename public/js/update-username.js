@@ -1,7 +1,9 @@
 const handleUsernameUpdate = (e) => {
-    e.preventDefault();
-    try{
+  e.preventDefault();
+
+  try {
     const username = document.getElementById('update-username').value.trim();
+
     if (username) {
       const response = fetch('/api/user/username', {
         method: 'PATCH',
@@ -18,10 +20,11 @@ const handleUsernameUpdate = (e) => {
     } else {
       alert('Cannot have empty fields');
     }
-}catch(e)
-{
+  } catch (e) {
     console.log(e);
-}
-  };
-  
-  document.querySelector('button').addEventListener('click', handleUsernameUpdate);
+  }
+};
+
+document
+  .querySelector('#update-username-btn')
+  .addEventListener('click', handleUsernameUpdate);

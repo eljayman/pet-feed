@@ -2,6 +2,7 @@ const handleEmailUpdate = (e) => {
   e.preventDefault();
   //get pet name, species and breed from input
   const email = document.getElementById('update-email').value.trim();
+
   if (email) {
     const response = fetch('/api/user/email', {
       method: 'PATCH',
@@ -20,4 +21,6 @@ const handleEmailUpdate = (e) => {
   }
 };
 
-document.querySelector('button').addEventListener('click', handleEmailUpdate);
+document
+  .querySelector('#update-email-btn')
+  .addEventListener('click', handleEmailUpdate);

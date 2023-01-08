@@ -1,0 +1,36 @@
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 20;
+  border-right: 2px solid black;
+}
+
+.profile-title {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.profile-section p {
+  margin-top: 5px;
+}
+
+.update-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.link-btn {
+  display: block;
+  text-align: center;
+  margin: 10 5px 5px 10px;
+  border-radius: 5px;
+  padding: 8px 16px;
+  border: 2px solid rgb(43, 43, 43);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  max-width: fit-content;
+}
+
+.login-btn:hover {
+  color: #fff !important;
+  background-color: #1f3a52 !important;
+}

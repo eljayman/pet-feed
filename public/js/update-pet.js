@@ -4,6 +4,7 @@ const handlePetUpdate = (e) => {
   const pet_name = document.getElementById('update-pet-name').value.trim();
   const species = document.getElementById('update-pet-species').value.trim();
   const breed = document.getElementById('update-pet-breed').value.trim();
+
   if (pet_name && species && breed) {
     const response = fetch('/api/user/pet', {
       method: 'PATCH',
@@ -22,4 +23,6 @@ const handlePetUpdate = (e) => {
   }
 };
 
-document.querySelector('button').addEventListener('click', handlePetUpdate);
+document
+  .querySelector('#update-pet-btn')
+  .addEventListener('click', handlePetUpdate);

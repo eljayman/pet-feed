@@ -5,7 +5,8 @@ const handlePasswordUpdate = (e) => {
   const passwordConfirm = document
     .getElementById('update-password-confirm')
     .value.trim();
-  if (password === passwordConfirm) {
+
+  if (password === passwordConfirm && password) {
     const response = fetch('/api/user/password', {
       method: 'PATCH',
       body: JSON.stringify({ password }),
@@ -19,10 +20,10 @@ const handlePasswordUpdate = (e) => {
       }
     });
   } else {
-    alert('Passwords do not match');
+    alert('Please fill out both fields and make sure the passwords match');
   }
 };
 
 document
-  .querySelector('button')
+  .querySelector('#update-password-btn')
   .addEventListener('click', handlePasswordUpdate);

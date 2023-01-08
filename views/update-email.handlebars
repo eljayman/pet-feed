@@ -1,14 +1,17 @@
-<div class=" h-full flex flex-row"> 
-    {{>profileInfo user }}
-    <div class="flex flex-col w-full m-4">
-
-    <div class='inline-flex flex-row flex-wrap my-1.5 justify-around w-full'>
-        <label for='update-email'>Update Email Address: </label>
-        <input type='text' id='update-email' />
-        <div class = 'button-field'>
-            <button id="update-name">Update Email</button>
-        </div>
-    </div>
-    </div>  
-</div> 
+<link rel="stylesheet" href="/css/handlebarsPartials/profile-update-forms.css"/>
+<div class=" h-full flex flex-row">
+  {{>profileInfo user }}
+  <div class="update-content">
+    <form class='update-form theme-d3'>
+      <div class="update-form-title">Update Email Address</div>
+      <div class="update-form-field">
+        <label for='update-email'>New Email Address: </label>
+        <input class="theme-l5" type='text' id='update-email' placeholder="example@gmail.com"/>
+      </div>
+      <div class='form-button-wrapper'>
+        <button id="update-email-btn" class="theme-d5 form-submit">Update Email</button>
+      </div>
+    </form>
+  </div>
+</div>
 <script src="../js/update-email.js"></script>
