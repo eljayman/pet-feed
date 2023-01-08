@@ -21,15 +21,20 @@
 }
 
 .update-form-field {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .update-form-field label {
-  margin-right: 5px;
+  margin-right: 10px;
   text-shadow: 0 0 3px black;
+  width: 40%;
+  text-align: right;
 }
 
 .update-form-field input {
+  max-height: 24px;
   padding-left: 10px;
 }
 

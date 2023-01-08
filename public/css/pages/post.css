@@ -47,6 +47,7 @@
   border-radius: 5px;
   padding: 12px 32px;
   transition: background-color 0.2s ease;
+  border: 1px solid black;
 }
 
 .submit-btn:hover,

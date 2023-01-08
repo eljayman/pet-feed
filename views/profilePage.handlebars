@@ -1,11 +1,12 @@
-<div class=""> 
+<div class="profile-page-main"> 
     {{>profileInfo user }}
-    <div class="">
-        <div class="">
-             {{#each posts as |post|}}
-                {{>postcard post = post}}
-            {{/each}}
+    <div class="profile-content-wrapper">
+        <div class='profile-content-title theme-d3'>My Posts: </div>
+        <div class="profile-content">
+                {{#each posts as |post|}}
+                    {{>postcard post = post}}
+                {{/each}}
         </div>
-    </div>
+    </div>  
 </div>
 

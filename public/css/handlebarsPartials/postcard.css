@@ -5,6 +5,7 @@
   width: 400px;
   border: 2px solid black;
   box-shadow: 0 0 20px black;
+  height: max-content;
 }
 
 .postcard-title {

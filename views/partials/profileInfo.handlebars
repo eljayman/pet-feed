@@ -5,7 +5,10 @@
     <p>Username: {{user_name}}</p>
     <p>Email: {{email}}</p>
     <div class='update-buttons'>
-      <a class='' href='/update-username/'>
+      <a href='/profile'>
+        <button class='link-btn theme-d5'>My Posts</button>
+      </a>
+      <a href='/update-username/'>
         <button class='link-btn theme-d5'>Change your username</button>
       </a>
       <a class='link-btn theme-d5' href='/update-email/'>
@@ -20,8 +23,8 @@
   <div class='profile-section'>
     <h2 class='profile-title'>My Pet</h2>
     <p class='mx-1 my-0.5'>Name: {{pet_name}}</p>
-    <p class='mx-1 my-0.5'>{{species}}</p>
-    <p class='mx-1 my-0.5'>{{breed}}</p>
+    <p class='mx-1 my-0.5'>Species: {{species}}</p>
+    <p class='mx-1 my-0.5'>Breed: {{breed}}</p>
     <a class='link-btn theme-d5' href='/update-pet/'>
       <button>Update Pet</button>
     </a>

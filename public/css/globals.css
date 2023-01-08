@@ -71,11 +71,40 @@
   border: 1px solid black;
 
   transition: opacity 0.2s ease;
+  pointer-events: none;
 }
 
-.nav-li:hover .nav-tooltip {
+a:hover + .nav-tooltip {
   opacity: 1;
-  pointer-events: none;
+}
+
+.profile-page-main {
+  display: flex;
+  height: 100%;
+}
+
+.profile-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.profile-content-title {
+  margin-top: 40px;
+  font-size: xx-large;
+  font-weight: 700;
+  border: 1px solid black;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {
