@@ -41,6 +41,22 @@
   display: none;
 }
 
+.image-preview-wrapper {
+  margin: 20px 0 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.image-preview-wrapper div {
+  width: 50%;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.image-preview-wrapper img {
+  border: 1px solid black;
+}
+
 .submit-btn,
 .upload-btn {
   margin-top: 10px;

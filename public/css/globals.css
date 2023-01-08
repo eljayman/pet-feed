@@ -121,6 +121,7 @@ a:hover + .nav-tooltip {
 .profile-content {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 

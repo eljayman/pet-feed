@@ -31,7 +31,12 @@
           id='picture'
           name='post-picture'
           accept='.png, .jpg'
+          onchange="document.getElementById('output-img').src = window.URL.createObjectURL(this.files[0])"
         />
+      </div>
+      <div class='image-preview-wrapper'>
+        <div class='image-preview-text'>Image Preview: </div>
+        <img id='output-img' src='' width='50' height='50' />
       </div>
       <div class='form-group'>
         <button
