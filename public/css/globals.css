@@ -23,6 +23,11 @@
   background-color: #325c81 !important;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 .navbar {
   border-top: 3px solid black;
   border-bottom: 3px solid black;
@@ -30,7 +35,7 @@
   flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 #nav-home {
@@ -85,9 +90,21 @@ a:hover + .nav-tooltip {
 
 .profile-content-wrapper {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
   align-items: center;
+}
+
+.hamburger-btn {
+  position: absolute;
+  padding: 10px;
+  font-size: x-large;
+  border: 1px solid black;
+  border-radius: 10px;
+  left: 20px;
+  top: 20px;
+  display: none;
 }
 
 .profile-content-title {
@@ -105,6 +122,13 @@ a:hover + .nav-tooltip {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .hamburger-btn {
+    cursor: pointer;
+    display: block;
+  }
 }
 
 @media screen and (max-width: 500px) {

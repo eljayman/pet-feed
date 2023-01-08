@@ -1,17 +1,22 @@
 <link rel="stylesheet" href="/css/handlebarsPartials/profile-update-forms.css"/>
 <div class="profile-page-main">
   {{>profileInfo user }}
-  <div class="profile-content">
-      <form class='update-form theme-d3'>
-        <div class="update-form-title">Update Username</div>
-        <div class="update-form-field">
-          <label for='update-username'>New Username: </label>
-          <input class="theme-l5" type='text' id='update-username' />
-        </div>
-        <div class='form-button-wrapper'>
-            <button class="theme-d5 form-submit" id="update-username-btn">Update Username</button>
-        </div>
-    </form>
-  </div> 
+  <div class='profile-content-wrapper'>
+    <div class='hamburger-btn theme-d3'>
+        <i class='fa-solid fa-bars'></i>
+    </div>
+    <div class="profile-content">
+        <form class='update-form theme-d3'>
+          <div class="update-form-title">Update Username</div>
+          <div class="update-form-field">
+            <label for='update-username'>New Username: </label>
+            <input class="theme-l5" type='text' id='update-username' />
+          </div>
+          <div class='form-button-wrapper'>
+              <button class="theme-d5 form-submit" id="update-username-btn">Update Username</button>
+          </div>
+      </form>
+    </div> 
+  </div>
 </div> 
 <script src="../js/update-username.js"></script>

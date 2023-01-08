@@ -1,11 +1,24 @@
 .profile-sidebar {
   display: flex;
+  position: relative;
   flex-direction: column;
   min-width: 300px;
   max-width: 300px;
   min-height: 100%;
-  padding: 20;
+  padding: 20px;
   border-right: 2px solid black;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: large;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
 }
 
 .profile-title {
@@ -21,6 +34,10 @@
   display: flex;
   flex-direction: column;
 }
+
+.update-buttons a {
+  width: max-content;
+}
 .link-btn {
   display: block;
   text-align: center;
@@ -35,4 +52,21 @@
 .login-btn:hover {
   color: #fff !important;
   background-color: #1f3a52 !important;
+}
+
+@media screen and (max-width: 900px) {
+  .profile-sidebar {
+    position: absolute;
+    left: -300px;
+    transition: left 0.5s ease;
+    z-index: 1;
+  }
+
+  .profile-sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-close {
+    display: block;
+  }
 }

@@ -13,6 +13,7 @@ router.get('/', withAuth, async (req, res) => {
     res.render('update-password', {
       user,
       loggedIn: req.session.logged_in,
+      isProfilePage: true,
     });
   } catch (err) {
     res.status(500).json(err);

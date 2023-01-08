@@ -1,6 +1,9 @@
 <div class="profile-page-main"> 
     {{>profileInfo user }}
     <div class="profile-content-wrapper">
+        <div class='hamburger-btn theme-d3'>
+            <i class='fa-solid fa-bars'></i>
+        </div>
         <div class='profile-content-title theme-d3'>My Posts: </div>
         <div class="profile-content">
                 {{#each posts as |post|}}
@@ -9,4 +12,3 @@
         </div>
     </div>  
 </div>
-

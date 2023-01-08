@@ -62,6 +62,9 @@
       integrity='sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU='
       crossorigin='anonymous'
     ></script>
+    {{#if isProfilePage}}
+      <script src='/js/profile-hamburger.js'></script>
+    {{/if}}
     {{#if loggedIn}}
       <script src='/js/logout.js'></script>
     {{/if}}

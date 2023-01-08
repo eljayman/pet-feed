@@ -1,26 +1,30 @@
 <link rel="stylesheet" href="/css/handlebarsPartials/profile-update-forms.css"/>
 <div class="profile-page-main"> 
 	{{>profileInfo user }}
-	<div class="profile-content">
-
-		<form class='update-form theme-d3'>
-			<div class="update-form-title">Update Pet Information</div>
-			<div class="update-form-field">
-					<label for='update-pet-name'>Update Pet Name: </label>
-					<input class="theme-l5" type='text' id='update-pet-name' />
-			</div>
-			<div class="update-form-field">
-				<label for='update-pet-species'>Update Species</label>
-				<input class="theme-l5" type='text' id='update-pet-species' />
-			</div>
-			<div class="update-form-field">
-				<label for='update-pet-breed'>Update Breed: </label>
-				<input class="theme-l5" type='text' id='update-pet-breed' />
-			</div>
-			<div class='form-button-wrapper'>
-				<button class="theme-d5 form-submit" id="update-pet-btn">Update Pet</button>
-			</div>
-		</form>
-	</div>  
+	<div class='profile-content-wrapper'>
+		<div class='hamburger-btn theme-d3'>
+				<i class='fa-solid fa-bars'></i>
+		</div>
+		<div class="profile-content">
+			<form class='update-form theme-d3'>
+				<div class="update-form-title">Update Pet Information</div>
+				<div class="update-form-field">
+						<label for='update-pet-name'>Update Pet Name: </label>
+						<input class="theme-l5" type='text' id='update-pet-name' />
+				</div>
+				<div class="update-form-field">
+					<label for='update-pet-species'>Update Species</label>
+					<input class="theme-l5" type='text' id='update-pet-species' />
+				</div>
+				<div class="update-form-field">
+					<label for='update-pet-breed'>Update Breed: </label>
+					<input class="theme-l5" type='text' id='update-pet-breed' />
+				</div>
+				<div class='form-button-wrapper'>
+					<button class="theme-d5 form-submit" id="update-pet-btn">Update Pet</button>
+				</div>
+			</form>
+		</div>  
+	</div>
 </div> 
 <script src="../js/update-pet.js"></script>

@@ -1,17 +1,22 @@
 <link rel="stylesheet" href="/css/handlebarsPartials/profile-update-forms.css"/>
 <div class="profile-page-main">
   {{>profileInfo user }}
-  <div class="profile-content">
-    <form class='update-form theme-d3'>
-      <div class="update-form-title">Update Email Address</div>
-      <div class="update-form-field">
-        <label for='update-email'>New Email Address: </label>
-        <input class="theme-l5" type='text' id='update-email' placeholder="example@mail.com"/>
-      </div>
-      <div class='form-button-wrapper'>
-        <button id="update-email-btn" class="theme-d5 form-submit">Update Email</button>
-      </div>
-    </form>
+  <div class='profile-content-wrapper'>
+    <div class='hamburger-btn theme-d3'>
+        <i class='fa-solid fa-bars'></i>
+    </div>
+    <div class="profile-content">
+      <form class='update-form theme-d3'>
+        <div class="update-form-title">Update Email Address</div>
+        <div class="update-form-field">
+          <label for='update-email'>New Email Address: </label>
+          <input class="theme-l5" type='text' id='update-email' placeholder="example@mail.com"/>
+        </div>
+        <div class='form-button-wrapper'>
+          <button id="update-email-btn" class="theme-d5 form-submit">Update Email</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 <script src="../js/update-email.js"></script>
